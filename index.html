@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rural Revitalization Field Camp | Showcase</title>
+  <meta name="description" content="An English showcase webpage for the Rural Revitalization Field Camp and the Zhì Shě · Weave the Dream social innovation project."/>
+  <style>
+    :root{
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:rgba(15,23,42,.10);
+      --shadow:0 12px 30px rgba(15,23,42,.08);
+      --radius:18px;
+      --radius2:26px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(56,189,248,.20), transparent 60%),
+        radial-gradient(900px 450px at 85% 10%, rgba(167,139,250,.18), transparent 55%),
+        radial-gradient(800px 500px at 50% 100%, rgba(34,197,94,.12), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(247,251,255,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,#38bdf8,#a78bfa,#22c55e)}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{font-size:14px; color:var(--muted); padding:8px 10px; border-radius:999px}
+    .links a:hover{background:rgba(15,23,42,.05); color:var(--text)}
+    .hero{
+      margin-top:18px;
+      border-radius:var(--radius2);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border:1px solid var(--border);
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.88), rgba(255,255,255,.65)),
+        url('assets/images/full/img_568d383f63.webp') center/cover no-repeat;
+    }
+    .hero__inner{padding:42px 28px}
+    @media (min-width:900px){ .hero__inner{padding:64px 56px; max-width:720px} }
+    .kicker{display:inline-flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); background:rgba(255,255,255,.7); padding:8px 12px; border-radius:999px; border:1px solid var(--border)}
+    h1{font-size:40px; line-height:1.1; margin:14px 0 10px}
+    @media (min-width:900px){ h1{font-size:54px} }
+    .lead{font-size:16px; color:var(--muted); margin:0 0 18px}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px; border-radius:999px; border:1px solid var(--border);
+      background:rgba(255,255,255,.88);
+      box-shadow: 0 8px 18px rgba(15,23,42,.06);
+      font-weight:600; font-size:14px;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn--solid{background:linear-gradient(135deg, rgba(56,189,248,.95), rgba(167,139,250,.92)); color:white; border:0}
+    section{margin:34px 0}
+    .section__title{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:14px}
+    h2{font-size:22px; margin:0}
+    .hint{color:var(--muted); font-size:14px}
+    .grid2{display:grid; gap:16px}
+    @media (min-width:900px){ .grid2{grid-template-columns: 1.15fr .85fr} }
+    .panel{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .panel p{margin:0 0 10px; color:var(--muted)}
+    .panel ul{margin:10px 0 0 18px; color:var(--muted)}
+    .mini{
+      display:flex; gap:12px; align-items:center;
+      padding:12px; border-radius:16px;
+      border:1px solid var(--border); background:rgba(255,255,255,.75);
+    }
+    .mini img{width:74px; height:74px; object-fit:cover; border-radius:14px; border:1px solid var(--border)}
+    .mini b{display:block}
+    .cards{display:grid; gap:14px}
+    @media (min-width:900px){ .cards{grid-template-columns: repeat(3, 1fr)} }
+    .card{
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      background:rgba(255,255,255,.85);
+    }
+    .card__media{height:160px; background-size:cover; background-position:center}
+    .card__body{padding:14px}
+    .card__body h3{margin:0 0 6px; font-size:16px}
+    .card__body p{margin:0; color:var(--muted); font-size:14px}
+    .itinerary{display:grid; gap:14px}
+    @media (min-width:900px){ .itinerary{grid-template-columns: 1fr 1fr} }
+    .itinerary__col h3{margin:0 0 10px; font-size:16px}
+    details.day{border:1px solid var(--border); background:rgba(255,255,255,.75); border-radius:16px; padding:10px 12px; margin-bottom:10px}
+    details.day summary{cursor:pointer; list-style:none; display:flex; gap:10px; align-items:baseline}
+    details.day summary::-webkit-details-marker{display:none}
+    .day__date{font-weight:700; color:var(--text); min-width:110px}
+    .day__title{color:var(--muted); font-weight:600}
+    .bullets{margin:10px 0 0 18px; color:var(--muted)}
+    .bullets li{margin:6px 0}
+    .gallery{display:grid; gap:10px; grid-template-columns: repeat(2, 1fr)}
+    @media (min-width:680px){ .gallery{grid-template-columns: repeat(3, 1fr)} }
+    @media (min-width:980px){ .gallery{grid-template-columns: repeat(4, 1fr)} }
+    .g-item{padding:0; border:0; background:none; cursor:pointer}
+    .g-item img{width:100%; height:180px; object-fit:cover; border-radius:16px; border:1px solid var(--border); box-shadow: 0 10px 18px rgba(15,23,42,.06); transition: transform .15s ease}
+    .g-item:hover img{transform: translateY(-2px)}
+    .lightbox{position:fixed; inset:0; background: rgba(2,6,23,.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:50}
+    .lightbox.is-open{display:flex}
+    .lb-card{max-width:min(1100px, 96vw); max-height:88vh; background:rgba(255,255,255,.92); border-radius:22px; overflow:hidden; border:1px solid rgba(255,255,255,.12)}
+    .lb-top{display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid rgba(15,23,42,.10)}
+    .lb-top span{color:rgba(15,23,42,.65); font-size:13px}
+    .lb-close{border:1px solid rgba(15,23,42,.14); background:rgba(255,255,255,.9); border-radius:12px; padding:8px 10px; cursor:pointer}
+    .lb-img{display:block; width:100%; height:auto; max-height: calc(88vh - 48px); object-fit:contain; background:#0b1020}
+    footer{margin:40px 0 10px; color:var(--muted); font-size:13px}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{font-size:12px; padding:7px 10px; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.72); color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap">
+      <div class="brand"><span class="dot"></span> Rural Revitalization Showcase</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero__inner">
+        <div class="kicker">🌿 Education Promotes Rural Revitalization</div>
+        <h1>Rural Revitalization Field Camp</h1>
+        <p class="lead">A multi-site learning journey across Xi’an and Fuyang — connecting universities, communities, and cultural heritage through research, design, and hands-on practice.</p>
+        <div class="cta">
+          <a class="btn btn--solid" href="#gallery">View Photos</a>
+          <a class="btn" href="#itinerary">Explore Itinerary</a>
+          <a class="btn" href="#project">Meet the Project</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="section__title">
+        <h2>About the Program</h2>
+        <div class="hint">Two cities • Field research • Design for impact</div>
+      </div>
+      <div class="grid2">
+        <div class="panel">
+          <p>
+            This program is designed to connect <b>education</b> with <b>rural revitalization</b>.
+            Participants learn through university lectures, community visits, cultural heritage exploration,
+            and hands-on workshops — turning observations into stories, prototypes, and practical proposals.
+          </p>
+          <ul>
+            <li><b>Learning format:</b> lecture + fieldwork + workshop + team creation</li>
+            <li><b>Core themes:</b> rural governance, agriculture innovation, culture & heritage, design empowerment</li>
+            <li><b>Mentorship:</b> guided by faculty and experts, including <b>Professor Bing Chen</b></li>
+          </ul>
+          <div class="chips">
+            <span class='chip'>Xi’an Jiaotong-Liverpool University (XJTLU)</span><span class='chip'>Xi’an Jiaotong University (XJTU)</span><span class='chip'>Suzhou Radio &amp; TV / Suzhou Traffic Broadcasting</span><span class='chip'>XJTLU Affiliated School</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="mini">
+            <img src="assets/images/thumb/img_53c63cd9b3.webp" alt="Workshop photo"/>
+            <div>
+              <b>Hands-on making</b>
+              <div style="color:var(--muted); font-size:13px;">Craft practice to understand materials, labor, and value.</div>
+            </div>
+          </div>
+          <div style="height:10px"></div>
+          <div class="mini">
+            <img src="assets/images/thumb/img_2a9dc7ca60.webp" alt="Field visit photo"/>
+            <div>
+              <b>On-site research</b>
+              <div style="color:var(--muted); font-size:13px;">Observe, interview, document, and reflect.</div>
+            </div>
+          </div>
+          <div style="height:10px"></div>
+          <div class="mini">
+            <img src="assets/images/thumb/img_d8f0256548.webp" alt="Mentorship photo"/>
+            <div>
+              <b>Guided learning</b>
+              <div style="color:var(--muted); font-size:13px;">Link academic insight to real community needs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+<div class="cards">
+  <article class="card">
+    <div class="card__media" style="background-image:url('assets/images/full/img_2a9dc7ca60.webp')"></div>
+    <div class="card__body">
+      <h3>Field Visits</h3>
+      <p>Walk into rural landscapes, observe community governance, and learn through on-site research.</p>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card__media" style="background-image:url('assets/images/full/img_1d0d5f48c2.webp')"></div>
+    <div class="card__body">
+      <h3>Hands-on Craft</h3>
+      <p>Experience wicker weaving up close — from raw materials to form, structure, and storytelling.</p>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card__media" style="background-image:url('assets/images/full/img_d8f0256548.webp')"></div>
+    <div class="card__body">
+      <h3>Mentorship & Lectures</h3>
+      <p>University lectures and expert guidance link research, design, and real-world rural challenges.</p>
+    </div>
+  </article>
+</div>
+
+    </section>
+
+    <section id="project">
+      <div class="section__title">
+        <h2>Featured Social Innovation Project</h2>
+        <div class="hint">Heritage × Education × Sustainable Commerce</div>
+      </div>
+
+      <div class="grid2">
+        <div class="panel">
+          <h3 style="margin:0 0 8px">“Zhì Shě · Weave the Dream” (知舍 · 织梦)</h3>
+          <p>A social innovation initiative that combines intangible cultural heritage preservation, education empowerment, and industry upgrading. Using Fuyang’s nationally-recognized wicker weaving as a carrier, the project explores modern, eco-friendly product design and sustainable rural value creation.</p>
+          <ul>
+            <li><b>Core offering:</b> Premium handwoven pet-home products (cat/dog houses) redesigned with digital tools and contemporary aesthetics.</li>
+            <li><b>Digital assets:</b> A “one core, two wings” digital matrix: the Zhì Shě interactive design website as the technical moat, plus a brand site and e-commerce pages for conversion — complemented by an AI theme song and a full set of posters.</li>
+            <li><b>Research basis:</b> Grounded in research on interdisciplinary social practice and the “Four-Step Education Empowerment” framework guided by Professor Bing Chen and collaborators.</li>
+            <li><b>Team:</b> A three-student core team from Xi’an Jiaotong-Liverpool University, supported by an expert advisory group and a wider practice network.</li>
+          </ul>
+          <p style="margin-top:12px">
+            The goal is to build a replicable model where cultural heritage can be <b>learned</b>, <b>designed</b>,
+            and <b>sustainably commercialized</b> — while creating long-term value for local communities.
+          </p>
+        </div>
+        <div class="panel" style="padding:0; overflow:hidden">
+          <img src="assets/images/full/img_a590c62858.webp" alt="Group photo" style="width:100%; height:100%; object-fit:cover; display:block"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary">
+      <div class="section__title">
+        <h2>Itinerary Highlights</h2>
+        <div class="hint">Based on the official activity handbook (minor adjustments may apply)</div>
+      </div>
+
+      <div class="itinerary">
+        
+    <section class="itinerary__col">
+      <h3>Xi’an</h3>
+      
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 26 (Sat)</span>
+            <span class="day__title">Arrival &amp; City Immersion</span>
+          </summary>
+          <ul class="bullets">
+            <li>Travel and arrival in Xi’an</li>
+<li>Hotel check-in and group briefing</li>
+<li>Visit to Xingfu Linbelt (urban renewal public space)</li>
+<li>Night market experience</li>
+          </ul>
+        </details>
+        
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 27 (Sun)</span>
+            <span class="day__title">Learning at Xi’an Jiaotong University</span>
+          </summary>
+          <ul class="bullets">
+            <li>Professor lecture series at XJTU</li>
+<li>Campus lunch &amp;交流</li>
+<li>Xi’an Urban Planning Exhibition Hall visit</li>
+<li>Team-building at Xi’an City Wall</li>
+<li>Evening: content creation (group posts &amp; video editing)</li>
+          </ul>
+        </details>
+        
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 28 (Mon)</span>
+            <span class="day__title">Rural Research &amp; Heritage Exploration</span>
+          </summary>
+          <ul class="bullets">
+            <li>Field visit: agricultural machinery cooperative</li>
+<li>Community discussions and rural research symposium</li>
+<li>Terracotta Warriors / museum visits (group routes)</li>
+<li>Datang Everbright City evening walk (nightscape)</li>
+          </ul>
+        </details>
+        
+    </section>
+    
+    <section class="itinerary__col">
+      <h3>Fuyang</h3>
+      
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 29 (Tue)</span>
+            <span class="day__title">Northern Anhui Cultural Primer</span>
+          </summary>
+          <ul class="bullets">
+            <li>High-speed rail transfer and arrival in Fuyang</li>
+<li>Visit Fuyang Normal University (history &amp; Huaihe culture)</li>
+<li>Hotel check-in</li>
+<li>Night market experience</li>
+          </ul>
+        </details>
+        
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 30 (Wed)</span>
+            <span class="day__title">Rural + Agriculture</span>
+          </summary>
+          <ul class="bullets">
+            <li>Fuyang Urban Planning Museum &amp; City Museum</li>
+<li>Community research: Baihang Community (rural governance case)</li>
+<li>Seed breeding base visit: modern agriculture &amp; innovation</li>
+<li>Workshop: design-empowered local products (recorded pitch rehearsal)</li>
+          </ul>
+        </details>
+        
+        <details class="day" open>
+          <summary>
+            <span class="day__date">Jul 31 (Thu)</span>
+            <span class="day__title">Rural + People</span>
+          </summary>
+          <ul class="bullets">
+            <li>Village research and dialogues with left-behind elders &amp; children</li>
+<li>Donation activities and teaching support</li>
+<li>Exploring e-commerce and livestreaming for rural products</li>
+<li>Community development case studies &amp; reflection session</li>
+          </ul>
+        </details>
+        
+    </section>
+    
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section__title">
+        <h2>Photo Gallery</h2>
+        <div class="hint">Click any image to view it larger</div>
+      </div>
+
+      <div class="gallery">
+        
+<button class="g-item" data-full="assets/images/full/img_2fb3d0d4e7.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_2fb3d0d4e7.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_e649958feb.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_e649958feb.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_4cb6b90e80.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_4cb6b90e80.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_213dbeba87.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_213dbeba87.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_5f814a3a2d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_5f814a3a2d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_829d9045c6.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_829d9045c6.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_fa89d77849.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_fa89d77849.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_8a10b6aeca.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_8a10b6aeca.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_377cbcf074.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_377cbcf074.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_4e581cbd59.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_4e581cbd59.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_7c7c7a8a82.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_7c7c7a8a82.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_e39b62ee07.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_e39b62ee07.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_fbe1ca641a.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_fbe1ca641a.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_46c462e87d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_46c462e87d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_620b6be857.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_620b6be857.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_9f9064dacd.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_9f9064dacd.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_f7ff607b9d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_f7ff607b9d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_73afe243d8.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_73afe243d8.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_d7ba160e46.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_d7ba160e46.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_7f65b7d4a8.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_7f65b7d4a8.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_21aaae787f.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_21aaae787f.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_7b3c429fcb.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_7b3c429fcb.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_8804c23d59.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_8804c23d59.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_baf6be377c.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_baf6be377c.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_3a7b0636de.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_3a7b0636de.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_96656b5a2e.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_96656b5a2e.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_86545eab8f.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_86545eab8f.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_4527b0ca8d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_4527b0ca8d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_c54a70092d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_c54a70092d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_abe4b85470.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_abe4b85470.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_f53ba116f3.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_f53ba116f3.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_d4ef1264a1.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_d4ef1264a1.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_670504f181.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_670504f181.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_e144e8dbd5.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_e144e8dbd5.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_61a06080b8.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_61a06080b8.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_604a5c67ed.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_604a5c67ed.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_9e53fe4355.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_9e53fe4355.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_261eb67723.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_261eb67723.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_22e1a4df51.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_22e1a4df51.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_fd6d1521e9.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_fd6d1521e9.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_5e0156e3ee.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_5e0156e3ee.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_5e4847de68.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_5e4847de68.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_138ce00efa.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_138ce00efa.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_9996fbe0d4.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_9996fbe0d4.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_84a057624a.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_84a057624a.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_2a6323f05d.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_2a6323f05d.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_c8688fb2c3.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_c8688fb2c3.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+
+<button class="g-item" data-full="assets/images/full/img_a0b07ba6e0.webp" aria-label="Open photo">
+  <img src="assets/images/thumb/img_a0b07ba6e0.webp" loading="lazy" alt="Activity photo"/>
+</button>
+
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <div>© Showcase page. Built from the provided photos and documents.</div>
+        <div>Note: In English materials, the instructor “陈冰” is referred to as <b>Professor Bing Chen</b>.</div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lb-card">
+      <div class="lb-top">
+        <span>Photo viewer</span>
+        <button class="lb-close" id="lbClose" aria-label="Close">Close ✕</button>
+      </div>
+      <img class="lb-img" id="lbImg" alt="Expanded activity photo"/>
+    </div>
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const closeBtn = document.getElementById('lbClose');
+
+    function openLb(src){
+      lbImg.src = src;
+      lb.classList.add('is-open');
+      document.body.style.overflow='hidden';
+    }
+    function closeLb(){
+      lb.classList.remove('is-open');
+      lbImg.src = '';
+      document.body.style.overflow='';
+    }
+
+    document.querySelectorAll('.g-item').forEach(btn => {
+      btn.addEventListener('click', () => openLb(btn.dataset.full));
+    });
+
+    closeBtn.addEventListener('click', closeLb);
+    lb.addEventListener('click', (e) => {
+      if(e.target === lb) closeLb();
+    });
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+    });
+  </script>
+</body>
+</html>
